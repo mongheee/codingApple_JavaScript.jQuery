@@ -1,0 +1,15 @@
+JavaScript는 HTML을 조작하기 위한 목적으로 나온 언어이다.
+    - HTML 조작, Server and HTTP, 클릭 및 타이핑 감지, 비동기 처리, 자료 다루기 등을 할 수 있다.
+    - 가독성이 좋고, 
+  - JavaScript로 HTML조작하는 방법
+    : documnet를 통해서 요소에 접근을 하고 무엇을 어떻게 바꿀 것인가
+     
+    - document.getElementById("접근할 요소").무엇을 = "어떻게";
+      : Selector는 무엇을 통해서 요소에 접근할 것인지에 따라서 셀레터가 달라진다.
+        querySelector, getElementById, getElementByClass etc...
+
+
+
+UI 만드는 step
+1. HTML/CSS로 미리 디자인
+2. 필요할 때 보여달라는 코드를 짬
