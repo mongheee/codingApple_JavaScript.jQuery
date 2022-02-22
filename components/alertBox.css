@@ -1,9 +1,37 @@
-.alert-box {
+.login-alert-box {
   background-color: skyblue;
-  padding: 20px;
   color: white;
   border-radius: 5px;
 }
-.hidden {
-  display: none;
+.login-alert-box form {
+  display: flex;
+  align-items: center;
+}
+.login-input {
+  padding: 5px 20px;
+  width: 300px;
+  border: none;
+  background-color: skyblue;
+}
+login-input:focus {
+  border: none;
+}
+.login-alert-box .icon {
+  font-size: 30px;
+}
+
+.login-btn {
+  display: flex;
+  justify-content: center;
+}
+
+.btn-outline-success {
+  margin: 20px 30px;
+  color: skyblue;
+  border-color: skyblue;
+}
+.btn-outline-success:hover {
+  color: #fff;
+  background-color: skyblue;
+  border-color: skyblue;
 }

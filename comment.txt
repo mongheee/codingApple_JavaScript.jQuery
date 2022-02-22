@@ -3,13 +3,26 @@ JavaScript는 HTML을 조작하기 위한 목적으로 나온 언어이다.
     - 가독성이 좋고, 
   - JavaScript로 HTML조작하는 방법
     : documnet를 통해서 요소에 접근을 하고 무엇을 어떻게 바꿀 것인가
-     
     - document.getElementById("접근할 요소").무엇을 = "어떻게";
       : Selector는 무엇을 통해서 요소에 접근할 것인지에 따라서 셀레터가 달라진다.
         querySelector, getElementById, getElementByClass etc...
-
-
+  
+  -  HTML을 위에서부터 읽기 때문에 HTML를 미리 읽어 놓아야 JavaScript로 HTML을 조작할 수 있다.
+     그렇기 때문에 JavaScript는 조작할 HTML아래에 있어야 잘 동작한다.
 
 UI 만드는 step
 1. HTML/CSS로 미리 디자인
 2. 필요할 때 보여달라는 코드를 짬
+
+
+jQuery, React, Vue : 라이브러리
+  JavaScript의 HTML 조작문법을 쉽게 바꿔주는 라이브러리이다.
+
+  - document.querySelector -> $ 
+    :querySelectorAll처럼 여러가지 요소를 가지고 오고 인덱스도 필요 없다.
+  - addEventListener -> on
+  - innerHTML -> .html(")
+  - style -> css(property,value )
+  - .classList.add() -> addClass() /= removeClass(), toggleClass()
+  - display : none; -> hide()
+  - fadeOut(;), slideUp(); : fade animation 기능이 있는 function 제공 
