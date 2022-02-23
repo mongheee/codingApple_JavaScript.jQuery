@@ -1,32 +1,89 @@
+.alertBox {
+  width: 600px;
+  height: auto;
+  padding: 40px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 20px;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 100;
+}
+.alertBox span {
+  font-size: 15px;
+}
+.alertBox button {
+  margin-top: 30px;
+  font-size: 15px;
+}
+#popup-wrap {
+  width: 100%;
+  height: 100%;
+  backdrop-filter: contrast(0.2);
+  position: fixed;
+  z-index: 90;
+}
 .login-alert-box {
-  background-color: skyblue;
+  background-color: #fff;
   color: white;
-  border-radius: 5px;
+  padding: 0 5px;
+}
+.login-alert-box {
+  display: flex;
+  justify-content: center;
+  width: 70%;
+}
+
+.welcome-user,
+.login-alert-box,
+#login-btn {
+  margin: 20px;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0);
 }
 .login-alert-box form {
   display: flex;
+  flex-direction: column;
   align-items: center;
+  justify-content: center;
 }
-.login-input {
-  padding: 5px 20px;
-  width: 300px;
+.login-form {
+  padding: 30px;
+  width: 30%;
   border: none;
+  border-radius: 5px;
   background-color: skyblue;
 }
-login-input:focus {
+.login-form input {
+  background-color: skyblue;
+  outline-color: skyblue;
+  width: 80%;
   border: none;
+  border-bottom: 3px solid rgba(0, 0, 0, 0.8);
+  border-radius: 2px;
+  padding: 3px 10px;
+  margin: 8px;
 }
+.login-form input:focus {
+  outline: none;
+}
+.login-form input::placeholder {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
 .login-alert-box .icon {
   font-size: 30px;
 }
 
-.login-btn {
-  display: flex;
-  justify-content: center;
-}
-
 .btn-outline-success {
-  margin: 20px 30px;
   color: skyblue;
   border-color: skyblue;
 }
@@ -34,4 +91,8 @@ login-input:focus {
   color: #fff;
   background-color: skyblue;
   border-color: skyblue;
+}
+.btn-check:focus + .btn-outline-success,
+.btn-outline-success:focus {
+  box-shadow: 0 0 0 0.25rem rgb(135 206 235 / 50%);
 }

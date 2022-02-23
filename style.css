@@ -1,6 +1,9 @@
 @import "components/alertBox.css";
 @import "components/navbar.css";
-
+body {
+  width: 100%;
+  height: 100%;
+}
 .icon {
   border: none;
   background: none;
