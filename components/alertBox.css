@@ -22,22 +22,44 @@
   margin-top: 30px;
   font-size: 15px;
 }
+
 #popup-wrap {
   width: 100%;
   height: 100%;
-  backdrop-filter: contrast(0.2);
   position: fixed;
   z-index: 90;
+  background-color: rgba(0, 0, 0, 0.4);
+  /* backdrop-filter: contrast(0.2); */
+}
+.popup-fade-out {
+  opacity: 0;
+  visibility: hidden;
+  transition: all 1s;
+}
+.popup-fade-in {
+  opacity: 1;
+  visibility: visible;
+  transition: all 1s;
+}
+@keyframes loginFormFadeIn {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
 }
 .login-alert-box {
   background-color: #fff;
   color: white;
   padding: 0 5px;
-}
-.login-alert-box {
   display: flex;
   justify-content: center;
-  width: 70%;
+  width: 1200px;
+  opacity: 0;
+  animation: loginFormFadeIn 0.5s ease-in-out;
+  animation-delay: 0.4s;
+  animation-fill-mode: forwards;
 }
 
 .welcome-user,

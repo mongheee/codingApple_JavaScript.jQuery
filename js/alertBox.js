@@ -3,6 +3,8 @@ const loginBtn = document.querySelector("#login-btn");
 const popupWrap = document.querySelector("#popup-wrap");
 
 const HIDDEN_CLASSNAME = "hidden";
+const FADEOUT_CLASSNAME = "popup-fade-out";
+const FADEIN_CLASSNAME = "popup-fade-in";
 
 /* 모달창 만들기 */
 const alertBox = document.createElement("div");
@@ -60,15 +62,15 @@ function handlesubmitLogin(e) {
 }
 
 function alertBtnClick() {
-  loginBox.classList.remove(HIDDEN_CLASSNAME);
-  popupWrap.classList.add(HIDDEN_CLASSNAME);
   loginForm.addEventListener("submit", handlesubmitLogin);
-  alertBox.classList.toggle(HIDDEN_CLASSNAME);
+  popupWrap.classList.replace(FADEIN_CLASSNAME, FADEOUT_CLASSNAME);
+  loginBox.classList.remove(HIDDEN_CLASSNAME);
 }
 
 function loginClick() {
   loginBtn.classList.add(HIDDEN_CLASSNAME);
   popupWrap.classList.remove(HIDDEN_CLASSNAME);
+  popupWrap.classList.replace(FADEOUT_CLASSNAME, FADEIN_CLASSNAME);
   alertBox.classList.remove(HIDDEN_CLASSNAME);
   alertBtn.addEventListener("click", alertBtnClick);
 }
@@ -78,6 +80,8 @@ const saveId = localStorage.getItem("userId");
 if (saveId !== null) {
   paintUser(saveId);
   loginBtn.classList.toggle(HIDDEN_CLASSNAME);
+  popupWrap.classList.toggle(FADEOUT_CLASSNAME);
 } else {
   loginBtn.addEventListener("click", loginClick);
+  popupWrap.classList.toggle(FADEOUT_CLASSNAME);
 }
